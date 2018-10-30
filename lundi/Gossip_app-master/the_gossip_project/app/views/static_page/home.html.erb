@@ -1,0 +1,12 @@
+<header><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<nav class="navbar navbar-default"><%= link_to "team", team_path %>
+	<%= link_to "contact", contact_path %> <%= link_to "home", '/' %></nav>
+</header>
+
+
+<h1 class = "BLA">Sweet Home</h1>
+<br />
+<p><% @gossip.each do |popo| %>
+<li> <%= popo.content %> <br /> <%= popo.autho %><br />
+	<%= link_to "come here", potin_path(popo, :id)%>
+</li><% end %></p>
